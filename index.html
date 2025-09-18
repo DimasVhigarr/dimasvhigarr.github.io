@@ -16,7 +16,7 @@
     .slide-up {
       opacity: 0;
       transform: translateY(30px);
-      transition: all 0.8s ease;
+      transition: all 1s ease;
     }
     .slide-up.show {
       opacity: 1;
@@ -26,7 +26,7 @@
     .slide-left {
       opacity: 0;
       transform: translateX(-50px);
-      transition: all 0.8s ease;
+      transition: all 1s ease;
     }
     .slide-left.show {
       opacity: 1;
@@ -36,12 +36,41 @@
     .slide-right {
       opacity: 0;
       transform: translateX(50px);
-      transition: all 0.8s ease;
+      transition: all 1s ease;
     }
     .slide-right.show {
       opacity: 1;
       transform: translateX(0);
     }
+    .fade-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 1s ease-out;
+  }
+  .fade-left.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .fade-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 1s ease-out;
+  }
+  .fade-right.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease-out;
+  }
+  .fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
   </style>
 </head>
 <body class="font-sans bg-white text-black h-screen overflow-hidden">
@@ -166,14 +195,14 @@
 
    <!-- Skills Section -->
 <section id="skills" class="px-4 sm:px-6 py-16 sm:py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white min-h-screen flex flex-col justify-center snap-start">
-  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 sm:mb-16 text-center">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 sm:mb-16 text-center slide-up">
     My <span class="text-blue-400">Skills</span>
   </h2>
 
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
 
     <!-- Soft Skills -->
-    <div class="relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-md rounded-2xl shadow-xl p-6 sm:p-10 border border-gray-700 hover:border-blue-500 transition">
+    <div class="relative bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-md rounded-2xl shadow-xl p-6 sm:p-10 border border-gray-700 hover:border-blue-500 transition slide-left">
       <h3 class="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 flex items-center gap-2">
         🌱 Soft Skills
       </h3>
@@ -202,7 +231,7 @@
     </div>
 
     <!-- Hard Skills -->
-    <div class="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-md rounded-2xl shadow-xl p-6 sm:p-10 border border-gray-700 hover:border-cyan-500 transition">
+    <div class="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-md rounded-2xl shadow-xl p-6 sm:p-10 border border-gray-700 hover:border-cyan-500 transition slide-right">
       <h3 class="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 flex items-center gap-2">
         💻 Hard Skills
       </h3>
@@ -246,20 +275,20 @@
     <!-- ✅ My Journey Section -->
 <section id="journey" class="bg-white text-black px-4 sm:px-6 py-16 sm:py-20 min-h-screen flex flex-col justify-center snap-start">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-4">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-4 slide-up">
       My <span class="font-bold">Journey</span>
     </h2>
-    <p class="text-center max-w-2xl mx-auto text-gray-600 mb-10 sm:mb-12 text-sm sm:text-base">
+    <p class="text-center max-w-2xl mx-auto text-gray-600 mb-10 sm:mb-12 text-sm sm:text-base slide-up">
       A timeline of my academic, organizational, professional, and certification experiences.
     </p>
 
     <!-- Timeline Wrapper -->
-    <div class="relative">
+     <div class="relative">
       <!-- Vertical line -->
       <div class="absolute left-4 sm:left-1/2 transform sm:-translate-x-1/2 h-full border-l-2 border-gray-300"></div>
 
       <!-- Item 1: Kuliah -->
-      <div class="mb-10 flex flex-col sm:flex-row sm:justify-start relative pl-10 sm:pl-0">
+      <div class="mb-10 flex flex-col sm:flex-row sm:justify-start relative pl-10 sm:pl-0 slide-left">
         <div class="absolute left-2 sm:left-1/2 sm:-translate-x-1/2 top-2 w-4 h-4 bg-yellow-400 border-2 border-yellow-500 rounded-full"></div>
         <div class="sm:w-1/2 sm:pr-8 text-left sm:text-right">
           <h3 class="text-lg sm:text-xl font-semibold">Universitas Muhammadiyah Yogyakarta</h3>
@@ -269,7 +298,7 @@
       </div>
 
       <!-- Item 2: Organisasi -->
-      <div class="mb-10 flex flex-col sm:flex-row sm:justify-end relative pl-10 sm:pl-0">
+      <div class="mb-10 flex flex-col sm:flex-row sm:justify-end relative pl-10 sm:pl-0 slide-right">
         <div class="absolute left-2 sm:left-1/2 sm:-translate-x-1/2 top-2 w-4 h-4 bg-yellow-400 border-2 border-yellow-500 rounded-full"></div>
         <div class="sm:w-1/2 sm:pl-8 text-left">
           <h3 class="text-lg sm:text-xl font-semibold">Organization - KMTI UMY</h3>
@@ -279,7 +308,7 @@
       </div>
 
       <!-- Item 3: Cisco CCNA v7 -->
-      <div class="mb-10 flex flex-col sm:flex-row sm:justify-start relative pl-10 sm:pl-0">
+      <div class="mb-10 flex flex-col sm:flex-row sm:justify-start relative pl-10 sm:pl-0 slide-left">
         <div class="absolute left-2 sm:left-1/2 sm:-translate-x-1/2 top-2 w-4 h-4 bg-yellow-400 border-2 border-yellow-500 rounded-full"></div>
         <div class="sm:w-1/2 sm:pr-8 text-left sm:text-right">
           <h3 class="text-lg sm:text-xl font-semibold">Cisco Networking Academy</h3>
@@ -289,7 +318,7 @@
       </div>
 
       <!-- Item 4: Cisco Network Addressing -->
-      <div class="mb-10 flex flex-col sm:flex-row sm:justify-end relative pl-10 sm:pl-0">
+      <div class="mb-10 flex flex-col sm:flex-row sm:justify-end relative pl-10 sm:pl-0 slide-right">
         <div class="absolute left-2 sm:left-1/2 sm:-translate-x-1/2 top-2 w-4 h-4 bg-yellow-400 border-2 border-yellow-500 rounded-full"></div>
         <div class="sm:w-1/2 sm:pl-8 text-left">
           <h3 class="text-lg sm:text-xl font-semibold">Cisco Networking Academy</h3>
@@ -299,7 +328,7 @@
       </div>
 
       <!-- Item 5: Kampus Merdeka -->
-      <div class="mb-10 flex flex-col sm:flex-row sm:justify-start relative pl-10 sm:pl-0">
+      <div class="mb-10 flex flex-col sm:flex-row sm:justify-start relative pl-10 sm:pl-0 slide-left">
         <div class="absolute left-2 sm:left-1/2 sm:-translate-x-1/2 top-2 w-4 h-4 bg-yellow-400 border-2 border-yellow-500 rounded-full"></div>
         <div class="sm:w-1/2 sm:pr-8 text-left sm:text-right">
           <h3 class="text-lg sm:text-xl font-semibold">Kampus Merdeka - Independent Study</h3>
@@ -309,7 +338,7 @@
       </div>
 
       <!-- Item 6: Microsoft Certifications -->
-      <div class="mb-10 flex flex-col sm:flex-row sm:justify-end relative pl-10 sm:pl-0">
+      <div class="mb-10 flex flex-col sm:flex-row sm:justify-end relative pl-10 sm:pl-0 slide-right">
         <div class="absolute left-2 sm:left-1/2 sm:-translate-x-1/2 top-2 w-4 h-4 bg-yellow-400 border-2 border-yellow-500 rounded-full"></div>
         <div class="sm:w-1/2 sm:pl-8 text-left">
           <h3 class="text-lg sm:text-xl font-semibold">Microsoft Certifications</h3>
@@ -319,7 +348,7 @@
       </div>
 
       <!-- Item 7: Internship DLH -->
-      <div class="mb-10 flex flex-col sm:flex-row sm:justify-start relative pl-10 sm:pl-0">
+      <div class="mb-10 flex flex-col sm:flex-row sm:justify-start relative pl-10 sm:pl-0 slide-left">
         <div class="absolute left-2 sm:left-1/2 sm:-translate-x-1/2 top-2 w-4 h-4 bg-yellow-400 border-2 border-yellow-500 rounded-full"></div>
         <div class="sm:w-1/2 sm:pr-8 text-left sm:text-right">
           <h3 class="text-lg sm:text-xl font-semibold">Internship - Dinas Lingkungan Hidup</h3>
@@ -329,7 +358,7 @@
       </div>
 
       <!-- Item 8: Certiport -->
-      <div class="mb-10 flex flex-col sm:flex-row sm:justify-end relative pl-10 sm:pl-0">
+      <div class="mb-10 flex flex-col sm:flex-row sm:justify-end relative pl-10 sm:pl-0 slide-right">
         <div class="absolute left-2 sm:left-1/2 sm:-translate-x-1/2 top-2 w-4 h-4 bg-yellow-400 border-2 border-yellow-500 rounded-full"></div>
         <div class="sm:w-1/2 sm:pl-8 text-left">
           <h3 class="text-lg sm:text-xl font-semibold">Certiport</h3>
@@ -339,7 +368,7 @@
       </div>
 
       <!-- Item 9: BNSP -->
-      <div class="flex flex-col sm:flex-row sm:justify-start relative pl-10 sm:pl-0">
+      <div class="mb-10 flex flex-col sm:flex-row sm:justify-start relative pl-10 sm:pl-0 slide-left">
         <div class="absolute left-2 sm:left-1/2 sm:-translate-x-1/2 top-2 w-4 h-4 bg-yellow-400 border-2 border-yellow-500 rounded-full"></div>
         <div class="sm:w-1/2 sm:pr-8 text-left sm:text-right">
           <h3 class="text-lg sm:text-xl font-semibold">BNSP</h3>
@@ -369,7 +398,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
 
       <!-- Item 1 -->
-      <div>
+      <div class="fade-up">
         <img src="images/bnsp.jpg" alt="BNSP Certificate" 
              class="w-full h-48 sm:h-60 object-cover rounded-lg shadow-md hover:scale-105 transition cursor-pointer"
              onclick="openModal(this.src)">
@@ -379,7 +408,7 @@
       </div>
 
       <!-- Item 2 -->
-      <div>
+      <div class="fade-up">
         <img src="images/excel.jpg" alt="MOS Excel Certificate" 
              class="w-full h-48 sm:h-60 object-cover rounded-lg shadow-md hover:scale-105 transition cursor-pointer"
              onclick="openModal(this.src)">
@@ -389,7 +418,7 @@
       </div>
 
       <!-- Item 3 -->
-      <div>
+      <div class="fade-up">
         <img src="images/kamdek.jpg" alt="Kampus Merdeka Certificate" 
              class="w-full h-48 sm:h-60 object-cover rounded-lg shadow-md hover:scale-105 transition cursor-pointer"
              onclick="openModal(this.src)">
@@ -399,7 +428,7 @@
       </div>
 
       <!-- Item 4 -->
-      <div>
+      <div class="fade-up">
         <img src="images/powerplatform.jpg" alt="Microsoft Power Platform" 
              class="w-full h-48 sm:h-60 object-cover rounded-lg shadow-md hover:scale-105 transition cursor-pointer"
              onclick="openModal(this.src)">
@@ -409,7 +438,7 @@
       </div>
 
       <!-- Item 5 -->
-      <div>
+      <div class="fade-up">
         <img src="images/azure.jpg" alt="Microsoft Azure Certificate" 
              class="w-full h-48 sm:h-60 object-cover rounded-lg shadow-md hover:scale-105 transition cursor-pointer"
              onclick="openModal(this.src)">
@@ -419,7 +448,7 @@
       </div>
 
       <!-- Item 6 -->
-      <div>
+      <div class="fade-up">
         <img src="images/network.jpg" alt="Cisco Network Addressing Certificate" 
              class="w-full h-48 sm:h-60 object-cover rounded-lg shadow-md hover:scale-105 transition cursor-pointer"
              onclick="openModal(this.src)">
@@ -429,7 +458,7 @@
       </div>
 
       <!-- Item 7 -->
-      <div>
+      <div class="fade-up">
         <img src="images/ccna.jpg" alt="Cisco CCNA Certificate" 
              class="w-full h-48 sm:h-60 object-cover rounded-lg shadow-md hover:scale-105 transition cursor-pointer"
              onclick="openModal(this.src)">
@@ -461,35 +490,35 @@
     <div class="space-y-20">
 
       <!-- Project 1 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <!-- Gambar -->
-        <img src="images/capstone.jpg" alt="Project 1" 
-             class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <!-- Konten -->
-        <div>
-          <h3 class="text-5xl font-bold text-gray-200 mb-4">01</h3>
-          <h4 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">
-            Kampus Merdeka - Studi Independen di PT MariBelajar Indonesia Cerdas
-          </h4>
-          <p class="text-gray-600 mb-4 leading-relaxed text-sm sm:text-base">
-            Pengalaman mengikuti program Studi Independen di PT MariBelajar Indonesia Cerdas (Batch 6). 
-            Mengerjakan proyek berbasis web development dengan tim kolaboratif menggunakan teknologi modern.
-          </p>
-          <a href="#" class="text-blue-600 font-medium hover:underline">↗ View Project</a>
-        </div>
-      </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+  <!-- Gambar -->
+  <img src="images/capstone.jpg" alt="Project 1" 
+       class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 fade-left">
+  <!-- Konten -->
+  <div class="fade-right">
+    <h3 class="text-5xl font-bold text-gray-200 mb-4">01</h3>
+    <h4 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">
+      Kampus Merdeka - Studi Independen di PT MariBelajar Indonesia Cerdas
+    </h4>
+    <p class="text-gray-600 mb-4 leading-relaxed text-sm sm:text-base">
+      Pengalaman mengikuti program Studi Independen di PT MariBelajar Indonesia Cerdas (Batch 6). 
+      Mengerjakan proyek berbasis web development dengan tim kolaboratif menggunakan teknologi modern.
+    </p>
+    <a href="#" class="text-blue-600 font-medium hover:underline">↗ View Project</a>
+  </div>
+</div>
+
 
       <!-- Project 2 -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-  
   <!-- Gambar -->
-  <div class="order-1 md:order-2">
+  <div class="order-1 md:order-2 fade-right">
     <img src="images/porto2.jpg" alt="Project 2" 
          class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
   </div>
 
   <!-- Teks -->
-  <div class="order-2 md:order-1">
+  <div class="order-2 md:order-1 fade-left">
     <h3 class="text-5xl font-bold text-gray-200 mb-4">02</h3>
     <h4 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">
       Internship - Dinas Lingkungan Hidup Kabupaten Bantul
@@ -502,24 +531,26 @@
   </div>
 </div>
 
+
       <!-- Project 3 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <!-- Gambar -->
-        <img src="images/porto3.png" alt="Project 3" 
-             class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
-        <!-- Konten -->
-        <div>
-          <h3 class="text-5xl font-bold text-gray-200 mb-4">03</h3>
-          <h4 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">
-            Website Pelatihan Bisnis & Teknik Pembersihan Sepatu Berbasis Membership
-          </h4>
-          <p class="text-gray-600 mb-4 leading-relaxed text-sm sm:text-base">
-            Proyek Tugas Akhir: membangun platform pelatihan online berbasis membership 
-            dengan fitur kuis video interaktif serta sertifikat digital otomatis.
-          </p>
-          <a href="#" class="text-blue-600 font-medium hover:underline">↗ View Project</a>
-        </div>
-      </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+  <!-- Gambar -->
+  <img src="images/porto3.png" alt="Project 3" 
+       class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 fade-left">
+  <!-- Konten -->
+  <div class="fade-right">
+    <h3 class="text-5xl font-bold text-gray-200 mb-4">03</h3>
+    <h4 class="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">
+      Website Pelatihan Bisnis & Teknik Pembersihan Sepatu Berbasis Membership
+    </h4>
+    <p class="text-gray-600 mb-4 leading-relaxed text-sm sm:text-base">
+      Proyek Tugas Akhir: membangun platform pelatihan online berbasis membership 
+      dengan fitur kuis video interaktif serta sertifikat digital otomatis.
+    </p>
+    <a href="#" class="text-blue-600 font-medium hover:underline">↗ View Project</a>
+  </div>
+</div>
+
 
     </div>
   </div>
@@ -617,7 +648,7 @@
       });
     }, { threshold: 0.2 });
 
-    document.querySelectorAll('.slide-up, .slide-left, .slide-right').forEach(el => observer.observe(el));
+    document.querySelectorAll('.slide-up, .slide-left, .slide-right, .fade-left, .fade-right, .fade-up').forEach(el => observer.observe(el));
     
     function openModal(src) {
     document.getElementById("modalImage").src = src;
